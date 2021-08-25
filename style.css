@@ -1,0 +1,105 @@
+header{
+
+}
+
+body{
+  background-color:#f6f5f5;
+  font-family: 'Verdana';
+}
+
+input[type=button]{
+  font-family: 'Verdana', sans-serif;
+  position: absolute;
+
+  
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 3px solid #1687a7;
+  background: #fff;
+  color: #1687a7;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .35s;
+}
+
+input[type=button]:hover{
+  background: #1687a7;
+  color: #fff;
+}
+
+.start{
+  width: 80%;
+  margin: 3%;
+  padding: 3%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.7fr 1.8fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Results . Info ."
+      "Results . Jugada ."
+      "Results . . .";
+  }
+  
+  .Results {
+    display: grid;
+    grid-template-columns: 0.6fr 1.8fr 0.6fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". players .";
+    grid-area: Results;
+  }
+  
+  .players { grid-area: players; }
+  
+  #Jugada {
+    display: grid;
+    width : 90%;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.4fr 0.6fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Valores Valores Valores";*/
+    grid-area: Jugada;
+    visibility: hidden;
+    color:#1687a7;
+  }
+
+  .strike_values {
+    width : 30%;
+  }
+
+  #send_values {
+
+    margin: 12px 20px;
+    margin: 2%;
+    text-align: "center";
+  }
+  
+  .Valores { grid-area: Valores; width : 90%;}
+  
+  .Info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "name name name"
+      "Points Points Points";
+    grid-area: Info;
+  }
+  
+  .name { grid-area: name; }
+  
+  .Points { grid-area: Points; }
+  
